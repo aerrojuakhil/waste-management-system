@@ -1,0 +1,15 @@
+.forms{
+    padding-top: 5%;
+    width: 80%; 
+    margin: auto; 
+    text-align: center;
+    overflow: auto;
+}
+@media screen and (max-width: 480px) {
+    .forms{
+        padding-top: 10%;
+        width: 95%;  
+        text-align: center;
+        overflow: auto;
+    }
+}
