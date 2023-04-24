@@ -38,8 +38,8 @@ async function showDataServo() {
 }
 }
 setInterval(() => {
-showData("v2", "dry");
-showData("v3", "wet");
+showData("v5", "dry");
+showData("v4", "wet");
 showDataServo();
 }, 1000);
 //setInterval(showDataServo, 1000);
@@ -59,6 +59,10 @@ for (let data in content[selectedOption]){
   let response1 = await fetch(arrays[2]);
   let response2 = await fetch(arrays[3]);
   let json1 = await response1.json();
+  console.log(json1)
+  if(json1>70){
+    alert("Public bin is full")
+  }
   let json2 = await response2.json();
   document.querySelector("table tbody").innerHTML+=('<tr><th scope="row">'+arrays[0]+'</th><td>'+arrays[1]+'</td><td>'+json1+'</td><td>'+json2+'</td><td><a href='+arrays[4]+' target="_blank"><button type="button" class="btn btn-success" id="button">Locate</button></a></td></tr>');
 }
