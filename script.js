@@ -17,7 +17,7 @@ async function showData(pin, element) {
   const data = await response.text();
   const el = document.getElementById(element);
   if (el) {
-    el.innerHTML = data;
+    el.innerHTML = data + "%";
   }
 }
 async function showDataServo() {
